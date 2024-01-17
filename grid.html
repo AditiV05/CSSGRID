@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE-edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+       body{
+        height: 100vh;
+        width: 100vw;
+       }
+       .container{
+        width: 45%;
+        height: 75%;
+        margin: auto;
+        margin-top: 5%;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 18px;
+        grid-template-areas: 
+        "one two three"
+        "four five six"
+        "seven eight nine"
+        }
+        
+       .container>div{
+        background-color: teal;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: larger;
+        overflow: hidden;
+       }
+
+       img{
+        height: 230%;
+       }
+
+       #pic{
+        height: 260%;
+       }
+
+       h1{
+        text-align: center;
+        padding-top: 25px;
+        font-family: Garamond (serif);
+        color: #B0A695;
+       }
+    </style>
+</head>
+<body>
+    <h1>IMAGE GALLERY</h1>
+
+    <div class="container"> 
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/7a/f1/ad/7af1ad8a35ce781baed597f16f1c4447.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/ff/89/f4/ff89f4296eb76be8b0da8aaa6adcb2c5.jpg" alt="">
+        </div>
+        <div class="box">
+            <img id="pic" src="https://i.pinimg.com/564x/7f/11/76/7f1176417c6a55a75200ce3475df5c00.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/736x/f6/96/ad/f696ad8c675f3f189da3559c326a197b.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/09/37/e3/0937e31787a84d204f0131b6e4968f63.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/5b/0d/56/5b0d56afdb9738b0775adbf490c2253a.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/17/b7/1e/17b71e9520bafa73c14b9aec0789f539.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/564x/ee/04/7e/ee047e2f2147b3e771edbc0b20875cdd.jpg" alt="">
+        </div>
+        <div class="box">
+            <img src="https://i.pinimg.com/736x/cc/14/c6/cc14c67c832ac3af956a71ce8a09f33b.jpg" alt="">
+        </div>
+    </div>
+
+</body>
+</html>
